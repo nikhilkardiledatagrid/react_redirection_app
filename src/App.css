@@ -1,0 +1,126 @@
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--social-bg, #1a1a1a);
+  border: 1px solid var(--border, #2a2a2a);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.card .subtitle {
+  margin: 0 0 8px;
+  color: var(--text, #aaa);
+  font-size: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.field span {
+  font-weight: 600;
+}
+
+.field input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border, #333);
+  background: var(--bg, #0f0f0f);
+  color: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input:focus {
+  border-color: var(--accent, #646cff);
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.primary-btn,
+.secondary-btn {
+  margin-top: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.primary-btn {
+  background: var(--accent, #646cff);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  border-color: var(--accent-border, #535bf2);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: inherit;
+  border-color: var(--border, #333);
+}
+
+.secondary-btn:hover {
+  border-color: var(--accent, #646cff);
+}
+
+.info-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--bg, #0f0f0f);
+  border: 1px solid var(--border, #2a2a2a);
+}
+
+.info-list dt {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text, #888);
+}
+
+.info-list dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
