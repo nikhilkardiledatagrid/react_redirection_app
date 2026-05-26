@@ -14,6 +14,7 @@ function App() {
   const [deviceInfo, setDeviceInfo] = useState(null)
   const [form, setForm] = useState(emptyForm)
   const [errors, setErrors] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY)
@@ -24,6 +25,7 @@ function App() {
         localStorage.removeItem(STORAGE_KEY)
       }
     }
+    setIsLoading(false)
   }, [])
 
   const handleChange = (e) => {
@@ -58,6 +60,17 @@ function App() {
     setDeviceInfo(null)
     setForm(emptyForm)
     setErrors({})
+  }
+
+  if (isLoading) {
+    return (
+      <section className="screen">
+        <div className="loader" role="status" aria-live="polite">
+          <div className="spinner" aria-hidden="true"></div>
+          <p>Loading...</p>
+        </div>
+      </section>
+    )
   }
 
   if (deviceInfo) {
